@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.android.demo.pujaManagement.MainActivity" >
+
+    <item
+        android:id="@+id/option_addMember"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="100"
+        android:title="@string/addHouseData"
+        android:showAsAction="always">
+    </item>
+
+</menu>

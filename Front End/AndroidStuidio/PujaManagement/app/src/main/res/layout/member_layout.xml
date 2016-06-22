@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Layout_Margin">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style = "@style/Title_Column">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addMember"
+            android:id="@+id/tv_addMbTitle"
+            style = "@style/Title" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textSize="@dimen/button_text1"
+                android:id="@+id/btn_addMbDel"
+                android:visibility="visible" />
+
+            <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textSize="@dimen/button_text1"
+            android:id="@+id/btn_addMbSave" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        style="@style/First_Column">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userName"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView10" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_addMbName"
+            android:textSize="@dimen/text1"
+            android:layout_weight="0.54" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/headUser"
+            android:textSize="@dimen/text1"
+            android:id="@+id/cb_addMbHead" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        style="@style/Others_Column1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tel"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView11" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text1"
+            android:id="@+id/edt_addMbTel"
+            android:layout_weight="0.43" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        style="@style/Others_Column1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bornDate"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView12" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <TextView
+            android:id="@+id/tv_addMbBornDate"
+            style="@style/Date_Text"/>
+
+        <Button
+            android:id="@+id/btn_addMbBornDate"
+            style="@style/Date_Button"/>
+
+        <Spinner
+            android:layout_width="58dp"
+            android:layout_height="@dimen/line_height"
+            android:textSize="@dimen/text1"
+            android:id="@+id/spn_addMbBornTime"
+            android:layout_gravity="right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textSize="@dimen/text1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        style="@style/Others_Column1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dieDate"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView14" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <TextView
+            android:textSize="@dimen/text1"
+            android:id="@+id/tv_addMbDieDate"
+            style="@style/Date_Text"/>
+
+        <Button
+            android:id="@+id/btn_addMbDieDate"
+            style="@style/Date_Button" />
+
+        <Spinner
+            android:layout_width="58dp"
+            android:layout_height="@dimen/line_height"
+            android:textSize="@dimen/text1"
+            android:id="@+id/spn_addMbDieTime"
+            android:layout_gravity="right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView22" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/die"
+            android:id="@+id/cb_addMbDie"
+            android:textSize="@dimen/text1"
+            android:checked="false"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        style="@style/Others_Column1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Mail"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView42" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text1"
+            android:id="@+id/edt_addMbEmail"
+            android:layout_weight="0.9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        style="@style/Others_Column1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView16" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text1"
+            android:id="@+id/edt_addMbAddr"
+            android:layout_weight="0.9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        style="@style/Others_Column1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notes"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView17" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text1"
+            android:id="@+id/edt_addMbNote"
+            android:layout_weight="0.90" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Layout_Margin">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style = "@style/Title_Column">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/householdData"
+            android:textSize="@dimen/title1"
+            style = "@style/Title"   />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/addMember"
+                android:id="@+id/btn_householdAdd"
+                android:textSize="@dimen/button_text1"
+                android:onClick="on_addMember_click" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        style="@style/First_Column">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/headUser"
+            android:id="@+id/textView19"
+            android:textSize="@dimen/text1" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_householdName"
+            android:textSize="@dimen/text1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        style="@style/Others_Column1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:id="@+id/textView21"
+            android:textSize="@dimen/text1"/>
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_householdAddr"
+            android:textSize="@dimen/text1"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/lv_householdList"
+        style="@style/Others_Column1"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Others_Column1">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pujaSignUp"
+            android:id="@+id/btn_householdSignUP"
+            android:layout_weight="1"
+            android:textSize="@dimen/button_text1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/signUpStatus"
+            android:id="@+id/btn_householdStatus"
+            android:layout_weight="1"
+            android:textSize="@dimen/button_text1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/signUpPay"
+            android:id="@+id/btn_householdPay"
+            android:layout_weight="1"
+            android:textSize="@dimen/button_text1" />
+    </LinearLayout>
+
+</LinearLayout>

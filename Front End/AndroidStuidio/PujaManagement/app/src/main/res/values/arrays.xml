@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="puja_array">
+        <item>梁皇法會</item>
+        <item>地藏法會</item>
+        <item>藥師法會</item>
+        <item>水懺法會</item>
+    </string-array>
+
+    <string-array name="earthlyBranch">
+        <item></item>
+        <item>子</item>
+        <item>丑</item>
+        <item>寅</item>
+        <item>卯</item>
+        <item>辰</item>
+        <item>巳</item>
+        <item>午</item>
+        <item>未</item>
+        <item>申</item>
+        <item>酉</item>
+        <item>戌</item>
+        <item>亥</item>
+    </string-array>
+
+    <string-array name="signUpItems">
+        <item>消災祈福 - 懺主</item>
+        <item>消災祈福 - 副懺主</item>
+        <item>消災祈福 - 個人</item>
+        <item>拔薦超度 - 總功德主</item>
+        <item>拔薦超度 - 功德主</item>
+        <item>拔薦超度 - 副功德主</item>
+        <item>拔薦超度 - 一般</item>
+        <item>其他 - 佛前燈</item>
+        <item>其他 - 贊普</item>
+        <item>其他 - 白米</item>
+        <item>其他 - 設齋</item>
+        <item>其他 - 添香油</item>
+        <item>其他 - 供花</item>
+        <item>其他 - 供果</item>
+        <item>其他 - 十供</item>
+        <item>其他 - 供僧</item>
+        <item>其他 - 供糖</item>
+        <item>其他 - 點心</item>
+        <item>其他 - 紅龜</item>
+        <item>其他 - 米粉</item>
+        <item>其他 - 水電</item>
+        <item>其他 - 供品</item>
+    </string-array>
+</resources>

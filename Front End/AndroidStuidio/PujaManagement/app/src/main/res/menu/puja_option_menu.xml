@@ -1,0 +1,13 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.android.demo.pujaManagement.MainActivity" >
+
+    <item
+        android:id="@+id/option_addPuja"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="200"
+        android:title="@string/addPuja">
+    </item>
+
+</menu>

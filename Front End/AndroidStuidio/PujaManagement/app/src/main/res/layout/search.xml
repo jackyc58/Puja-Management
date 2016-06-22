@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Layout_Margin">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style = "@style/Title_Column">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:id="@+id/tv_searchTitle"
+            style = "@style/Title" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        style="@style/First_Column"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/inputName"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView10" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <EditText
+            android:layout_width="147dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_searchName"
+            android:textSize="@dimen/text1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            android:textSize="@dimen/button_text1"
+            android:id="@+id/btn_search"
+            android:onClick="on_search_click" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_search"
+        android:layout_marginTop="50dp" />
+
+</LinearLayout>

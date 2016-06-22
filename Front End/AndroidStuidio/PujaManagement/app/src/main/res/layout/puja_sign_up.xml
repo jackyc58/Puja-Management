@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Layout_Margin"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style = "@style/Title_Column">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pujaSignUp"
+            android:id="@+id/textView23"
+            style = "@style/Title"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/First_Column">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signUpDate"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView25" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yyyy/mm/dd"
+            android:textSize="@dimen/text1"
+            android:id="@+id/tv_signUpTodyDate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Others_Column1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signUpJoin"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView27" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <Spinner
+            android:layout_width="145dp"
+            android:layout_height="30dp"
+            android:id="@+id/spn_signUpPujaList" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Others_Column1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signUpJoiner"
+            android:textSize="@dimen/text1"
+            android:id="@+id/textView28" />
+
+        <TextView
+            style="@style/Colon_Text" />
+
+        <EditText
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_signUpParticipants"
+            android:textSize="@dimen/text1"
+            android:clickable="false"
+            android:gravity="center_horizontal"
+            android:editable="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/line_height"
+            android:text="@string/search"
+            android:textSize="@dimen/button_text1"
+            android:id="@+id/btn_signUpSearch" />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:text="uid"
+            android:id="@+id/tv_signUpUid"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:text="gid"
+            android:id="@+id/tv_signUpGid"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signUpAddItem"
+        android:textSize="@dimen/button_text1"
+        android:id="@+id/btn_signUpAddItem"
+        android:layout_marginTop="20dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"
+        android:id="@+id/lv_signUpItems"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.24" />
+
+</LinearLayout>

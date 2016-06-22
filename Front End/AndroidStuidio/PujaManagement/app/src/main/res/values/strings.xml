@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">寺廟法會管理系統</string>
+	
+	<string name="pujaSignUp">法會報名</string>
+	<string name="memberData">信徒資料</string>
+	<string name="householdData">全戶資料</string>
+	<string name="headUser">戶長</string>
+	<string name="address">住址</string>
+	<string name="signUpStatus">報名狀況</string>
+	<string name="signUpPay">報名繳費</string>
+	<string name="signUpDate">報名日期</string>
+	
+	<string name="signUpJoin">參加法會</string>
+	<string name="signUpMan">報名人</string>
+	<string name="signUpAddItem">新增報名項目</string>
+	<string name="signUpItem">報名項目</string>
+	<string name="signUpJoiner">參加者</string>
+	<string name="signUpLiver">陽上</string>
+	<string name="signUpDier">亡者</string>
+	<string name="signUpMoney">金額</string>
+	<string name="signUpMoneyDollar">元</string>
+	<string name="signUpMsg1">請新增法會之後, 再報名!</string>
+
+	<string name="desc1">(請用逗號隔開)</string>
+	
+	<string name="delete">刪除</string>
+	<string name="save">儲存"</string>
+	<string name="userName">姓名</string>
+	<string name="tel">電話</string>
+	<string name="bornDate">生時辰</string>
+	<string name="time">時</string>
+	<string name="dieDate">歿時辰</string>
+	<string name="die">歿</string>
+	<string name="notes">備註</string>
+	<string name="pajaName">名稱</string>
+	<string name="period">期間</string>
+	<string name="add">新增</string>
+	<string name="search">搜尋</string>
+	<string name="inputName">請輸入姓名</string>
+	<string name="exit">離開</string>
+	<string name="ok">確定</string>
+	<string name="cancel">取消</string>
+	<string name="finishProg">結束程式?</string>
+	<string name="inputUserName">請輸入姓名!</string>
+	<string name="inputTel">請輸入電話!</string>
+	<string name="inputAddr">請輸入址!</string>
+	<string name="confirmDel">確定要刪除嗎?</string>
+	<string name="wrong">發生錯誤</string>
+	<string name="inputSearchName">請輸入搜尋姓名!</string>
+	<string name="noName">查無此人</string>
+	<string name="message">訊息</string>
+
+	
+    <string name="addHouseData">新增戶資料</string>
+
+    <string name="pujaList">法會清單</string>
+
+    <string name="addMember">新增成員</string>
+    <string name="modifyMember">修改成員</string>
+
+    <string name="addPuja">新增法會</string>
+	<string name="modifyPuja">修改法會</string>
+	<string name="inputPujaDate">請選取法會開始和結束日期!</string>
+	<string name="input">請輸入</string>
+
+	<string name="addSignUpItem">新增項目</string>
+	<string name="modifySignUpItem">修改項目</string>
+
+
+
+</resources>

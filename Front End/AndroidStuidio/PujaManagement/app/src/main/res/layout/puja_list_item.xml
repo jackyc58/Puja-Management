@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="35dp"
+    android:background="@drawable/test_shape"
+    android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_pujaListCol1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:textColor="#999"
+            android:text="text1"
+            android:layout_weight="1"
+            android:textSize="@dimen/text1" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_pujaListCol2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:textColor="#999"
+            android:text="text1"
+            android:layout_weight="2"
+            android:textSize="@dimen/text1" >
+        </TextView>
+
+    <TextView
+        android:id="@+id/tv_pujaListCol3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textSize="0sp" >
+    </TextView>
+
+</LinearLayout>
+
+</LinearLayout>
