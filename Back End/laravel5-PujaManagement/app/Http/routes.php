@@ -6,6 +6,7 @@
     /*************************************************/
     // Get New GID
     Route::post('puja/getNewGid', function () { 
+        Log::info("[getNewGid]");
         return Response::json(array('gid' => (String)Uuid::generate(4)));
     });
        
@@ -20,6 +21,7 @@
     Route::post('puja/getHouseholdList/', function () { 
 
         $gid = Request::input('gid');
+        Log::info('[getHouseholdList] - [gid='.$gid.']');
 
 
         if (empty($gid))
@@ -43,6 +45,7 @@
     Route::post('puja/getHouseholdUsers/', function () { 
 
         $gid = Request::input('gid');
+        Log::info('[getHouseholdUsers] - [gid='.$gid.']');
 
 
         if (empty($gid))
@@ -79,6 +82,19 @@
         $die_time = Request::input('die_time');
         $notes = Request::input('notes');
         $email = Request::input('email');
+        
+        Log::info('[addMember] - [$gid='.$gid.', '.
+                                '$head='.$head.', '.
+                                '$username='.$username.', '.
+                                '$address='.$address.', '.
+                                '$tel='.$tel.', '.
+                                '$dead='.$dead.', '.
+                                '$born_date='.$born_date.', '.
+                                '$born_time='.$born_time.', '.
+                                '$die_date='.$die_date.', '.
+                                '$die_time='.$die_time.', '.
+                                '$notes='.$notes.', '.
+                                '$email='.$email.']');
         
         
         // define
@@ -175,6 +191,20 @@
         $die_time = Request::input('die_time');
         $notes = Request::input('notes');
         $email = Request::input('email');
+        
+        Log::info('[modifyMemberItem] - [$gid='.$gid.', '.
+                                '$uid='.$uid.', '.
+                                '$head='.$head.', '.
+                                '$username='.$username.', '.
+                                '$address='.$address.', '.
+                                '$tel='.$tel.', '.
+                                '$dead='.$dead.', '.
+                                '$born_date='.$born_date.', '.
+                                '$born_time='.$born_time.', '.
+                                '$die_date='.$die_date.', '.
+                                '$die_time='.$die_time.', '.
+                                '$notes='.$notes.', '.
+                                '$email='.$email.']');
 
         if (empty($born_date))
             $born_date = NULL;
@@ -213,6 +243,8 @@
         
     Route::post('puja/getMemberItem', function () {
         $uid = Request::input('uid');
+        
+        Log::info('[getMemberItem] - [$uid='.$uid.']');
              
         $pujas = \App\Models\User::select('username', 'email', 'head', 'address', 'tel', 'dead', 'born_date', 'born_time', 'die_date', 'die_time', 'notes')->where('uid' ,'like' ,$uid )->get();
                 
@@ -222,6 +254,8 @@
     Route::post('puja/deleteMemberItem', function () {
         $uid = Request::input('uid');
         $gid = Request::input('gid');
+        
+        Log::info('[deleteMemberItem] - [$gid='.$gid.', '.'$uid='.$uid.']');
         
         $deletedRows = \App\Models\User::where('uid', 'like', $uid )->delete();
         
@@ -237,12 +271,14 @@
     /*                  Puja                         */
     /*************************************************/
     Route::post('puja/getPujaList', function () {
+        Log::info('[getPujaList]');
         $pujas = \App\Models\Puja::all()->toJson();
 
         return $pujas;
     });
 
     Route::post('puja/getPujaListSimplify', function () {
+        Log::info('[getPujaListSimplify]');
         $pujas = \App\Models\Puja::select('pid', 'pname', 'begin_date')->get()->toJson();
 
         return $pujas;
@@ -250,6 +286,8 @@
     
     Route::post('puja/getPujaItem', function () {
         $pid = Request::input('pid');
+        
+        Log::info('[getPujaItem] - [$pid='.$pid.']');
              
         $pujas = \App\Models\Puja::select('pid', 'pname', 'begin_date', 'end_date', 'notes')->where('pid' ,'like' ,$pid )->get()->toJson();
                 
@@ -261,6 +299,12 @@
         $begin_date = Request::input('begin_date');
         $end_date = Request::input('end_date');
         $notes = Request::input('notes');
+        
+        Log::info('[addPuja] - [$pname='.$pname.', '
+                  .'$begin_date='.$begin_date.', '
+                  .'$end_date='.$end_date.', '
+                  .'$notes='.$notes                 
+                  .']');
 
         // Add Item
         $pujaDB = new \App\Models\Puja;
@@ -286,6 +330,8 @@
     Route::post('puja/deletePujaItem', function () {
         $pid = Request::input('pid');
         
+        Log::info('[deletePujaItem] - [$pid='.$pid.']');
+        
         $deletedRows = \App\Models\Puja::where('pid', 'like', $pid )->delete();
         
         $allCount = \App\Models\Puja::all()->count();
@@ -303,6 +349,13 @@
         $begin_date = Request::input('begin_date');
         $end_date = Request::input('end_date');
         $notes = Request::input('notes');
+        
+        Log::info('[modifyPujaItem] - [$pid='.$pid.', '
+                  .'$pname='.$pname.', '
+                  .'$begin_date='.$begin_date.', '
+                  .'$end_date='.$end_date.', '
+                  .'$notes='.$notes                 
+                  .']');
 
         if (empty($begin_date))
             $begin_date = NULL;
@@ -336,6 +389,8 @@
     /*************************************************/
     Route::post('puja/search/', function () {
         $username = Request::input('username');
+        
+        Log::info('[search] - [$username='.$username.']');
         
         $usersDB = new \App\Models\User;
         $s_ret = array();
@@ -392,6 +447,19 @@
         $item_money = Request::input('item_money');
         $notes = Request::input('notes');
         
+        Log::info('[addSignUpItem] - [$pname='.$pname.', '
+                  .'$signup_date='.$signup_date.', '
+                  .'$signup_uid='.$signup_uid.', '
+                  .'$signup_username='.$signup_username.', '
+                  .'$gid='.$gid.', '
+                  .'$item_id='.$item_id.', '
+                  .'$item_name='.$item_name.', '
+                  .'$item_liver='.$item_liver.', '
+                  .'$item_dier='.$item_dier.', '
+                  .'$item_money='.$item_money.', '
+                  .'$notes='.$notes                 
+                  .']');
+        
       
         // define
         $signUpsDB = new App\Models\Signup;
@@ -428,6 +496,10 @@
 
         $uid = Request::input('uid');
         $pname = Request::input('pname');
+        
+        Log::info('[getSignUpItemLists] - [$uid='.$uid.', '
+                  .'$pname='.$pname               
+                  .']');
 
 //        if (empty($uid))
 //            return Response::json(array('ret' => 'uid empty!', 'count' => '0'));
@@ -451,6 +523,8 @@
     Route::post('puja/getSignUpItem/', function () { 
 
         $sid = Request::input('sid');
+        
+        Log::info('[getSignUpItemLists] - [$sid='.$sid.']');
 
         if (empty($sid))
             return Response::json(array('ret' => 'sid empty!'));
@@ -488,6 +562,20 @@
         $item_dier = Request::input('item_dier');
         $item_money = Request::input('item_money');
         $notes = Request::input('notes');
+        
+        Log::info('[modifySignUpItem] - [$sid='.$sid.', '
+                  .'$pname='.$pname.', '
+                  .'$signup_date='.$signup_date.', '
+                  .'$signup_uid='.$signup_uid.', '
+                  .'$signup_username='.$signup_username.', '
+                  .'$gid='.$gid.', '
+                  .'$item_id='.$item_id.', '
+                  .'$item_name='.$item_name.', '
+                  .'$item_liver='.$item_liver.', '
+                  .'$item_dier='.$item_dier.', '
+                  .'$item_money='.$item_money.', '
+                  .'$notes='.$notes                 
+                  .']');
 
         if (empty($item_liver))
             $item_liver = NULL;
@@ -528,6 +616,8 @@
 
     Route::post('puja/deleteSignUpItem', function () {
         $sid = Request::input('sid');
+        
+        Log::info('[deleteSignUpItem] - [$sid='.$sid.']');
         
         $deletedRows = \App\Models\Signup::where('sid', 'like', $sid )->delete();
         
