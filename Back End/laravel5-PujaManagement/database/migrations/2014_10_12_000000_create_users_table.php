@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration {
 			$table->string('gid', 36)->nullable();
 			$table->string('username', 30);
 			$table->string('email', 50)->nullable();
-			$table->string('password', 32);
+			$table->string('password', 64);
 			$table->boolean('head')->nullable();
 			$table->string('address', 255)->nullable();
 			$table->string('tel', 50)->nullable();
